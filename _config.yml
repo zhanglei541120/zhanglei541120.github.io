@@ -8,8 +8,8 @@ url: "http://cnfeat"
 
 # About/contact
 owner: 
-  name: " CnFeat"
-  email: CnFeat@gmail.com
+  name: " zhanglei541120"
+  email: zhanglei541120@gmail.com
   bio: "写就是写的报酬"
 
 # Data
@@ -43,7 +43,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "CnFeat"
+      author: "zhanglei541120"
       header-img: "img/green.jpg" # We don't want posts without a header image, that whould mean white on white
 
 # Comments 
