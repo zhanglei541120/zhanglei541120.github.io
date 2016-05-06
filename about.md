@@ -14,16 +14,9 @@ header-img: "img/green.jpg"
 
 ###联系
 
-- [博客：zhanglei541120.github.io](zhanglei541120.github.io)
+- [博客：zhanglei541120.github.io](http://zhanglei541120.github.io)
 
-- [微博@CnFeat](http://weibo.com/207775270)
-
-
-<center>
-    <p><img src="http://i173.photobucket.com/albums/w63/cnfeat/2015-08-29-2_zpsqj7po8eo.png" align="center"></p>
-</center>
-
-
+- [邮箱：zhanglei541120@gmail.com]
 
 
 
