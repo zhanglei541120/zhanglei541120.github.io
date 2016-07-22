@@ -17,16 +17,16 @@ Given a sequence of integers, return the length of the longest subsequence that 
 
 ## Example
 
-    Input: [1,7,4,9,2,5]  
-    Output: 6  
-    The entire sequence is a wiggle sequence.  
+    Input: [1,7,4,9,2,5]
+    Output: 6
+    The entire sequence is a wiggle sequence.
 
-    Input: [1,17,5,10,13,15,10,5,16,8]  
-    Output: 7  
-    There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].  
+    Input: [1,17,5,10,13,15,10,5,16,8]
+    Output: 7
+    There are several subsequences that achieve this length. One is [1,17,10,13,10,16,8].
 
-    Input: [1,2,3,4,5,6,7,8,9]  
-    Output: 2  
+    Input: [1,2,3,4,5,6,7,8,9]
+    Output: 2
 
 ## 实现
 采用贪心，对于连续递增的子窜选择最大的数字，对于连续递减的子窜选择其最小的数组。并将最开始为减小的问题转化为最开始为增大的问题。代码如下：
