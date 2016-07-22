@@ -28,7 +28,6 @@ Output: 2
 # 实现
 采用贪心，对于连续递增的子窜选择最大的数字，对于连续递减的子窜选择其最小的数组。并将最开始为减小的问题转化为最开始为增大的问题。代码如下：
 
----
     ```class Solution {
         int wiggleMaxLengthInce(vector<int>& nums, int i, int j) {
             int count = 1;
