@@ -27,31 +27,33 @@ Output: 2
 
 # 实现
 采用贪心，对于连续递增的子窜选择最大的数字，对于连续递减的子窜选择其最小的数组。并将最开始为减小的问题转化为最开始为增大的问题。代码如下：
-class Solution {
-    int wiggleMaxLengthInce(vector<int>& nums, int i, int j) {
-        int count = 1;
-        while (i + 1 < j)
-        {
-            int index = i;
-            while (index + 1 < j && nums[index] <= nums[index + 1])
-                ++index;
-            if (nums[i] != nums[index]) ++count;
 
-            i = index;
-            while (i + 1 < j && nums[i] >= nums[i + 1])
-                ++i;
-            if (nums[i] != nums[index]) ++count;
+---
+    ```class Solution {
+        int wiggleMaxLengthInce(vector<int>& nums, int i, int j) {
+            int count = 1;
+            while (i + 1 < j)
+            {
+                int index = i;
+                while (index + 1 < j && nums[index] <= nums[index + 1])
+                    ++index;
+                if (nums[i] != nums[index]) ++count;
+
+                i = index;
+                while (i + 1 < j && nums[i] >= nums[i + 1])
+                    ++i;
+                if (nums[i] != nums[index]) ++count;
+            }
+            return count;
         }
-        return count;
-    }
-public:
-    int wiggleMaxLength(vector<int>& nums) {
-        if (nums.size() <= 1) return nums.size();
-        if (nums[0] <= nums[1]) return wiggleMaxLengthInce(nums, 0, nums.size());
-        // 将开始为减少的问题转化为增加的问题
-        int i = 1;
-        while (i + 1 < nums.size() && nums[i] >= nums[i + 1])
-        ++i;
-        return wiggleMaxLengthInce(nums, i, nums.size()) + 1;
-    }
-};
+    public:
+        int wiggleMaxLength(vector<int>& nums) {
+            if (nums.size() <= 1) return nums.size();
+            if (nums[0] <= nums[1]) return wiggleMaxLengthInce(nums, 0, nums.size());
+            // 将开始为减少的问题转化为增加的问题
+            int i = 1;
+            while (i + 1 < nums.size() && nums[i] >= nums[i + 1])
+            ++i;
+            return wiggleMaxLengthInce(nums, i, nums.size()) + 1;
+        }
+    };```
