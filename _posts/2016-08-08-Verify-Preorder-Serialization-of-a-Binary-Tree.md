@@ -1,12 +1,12 @@
 One way to serialize a binary tree is to use pre-order traversal. When we encounter a non-null node, we record the node's value. If it is a null node, we record using a sentinel value such as <b>#</b>.
 
-    """    _9_
+           _9_
           /   \
          3     2
         / \   / \
        4   1  #  6
       / \ / \   / \
-      # # # #   # # """
+      # # # #   # #
 
 For example, the above binary tree can be serialized to the string <code>"9,3,4,#,#,1,#,#,2,#,6,#,#"</code>, where # represents a null node.
 
@@ -18,13 +18,13 @@ You may assume that the input format is always valid, for example it could never
 
 
     Example 1:
-    <code>"9,3,4,#,#,1,#,#,2,#,6,#,#"</code>
+    "9,3,4,#,#,1,#,#,2,#,6,#,#"
     Return true
 
     Example 2:
-    <code>"1,#"</code>
+    "1,#"
     Return false
 
     Example 3:
-    <code>"9,#,#,1"</code>
+    "9,#,#,1"
     Return false
