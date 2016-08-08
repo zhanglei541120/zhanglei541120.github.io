@@ -50,38 +50,39 @@ You may assume that the input format is always valid, for example it could never
 根据状态转换图写出代码如下：
 
     class Solution {
-    enum st {s, s1, s2};
-    void del(string& s)
-    {
-        int i = 0, start = 1;
-        for (; start < s.size(); ++start)
+        enum st {s, s1, s2};
+        void del(string& s)
         {
-            if (s[start] >= '0' && s[start] <= '9' && s[start - 1] >= '0' && s[start - 1] <= '9')
+            int i = 0, start = 1;
+            for (; start < s.size(); ++start)
             {
-                s[start - 1] = '1';
-                break;
+                if (s[start] >= '0' && s[start] <= '9' && s[start - 1] >= '0' && s[start - 1] <= '9')
+                {
+                    s[start - 1] = '1';
+                    break;
+                }
+            }
+            for (i = start + 1; i < s.size(); ++i)
+            {
+                if (s[i] == '#' || s[i] == ',')
+                    s[start++] = s[i];
+                else if (s[i - 1] == '#' || s[i - 1] == ',')
+                {
+                    s[start++] = '1';
+                }
+            }
+            s.resize(start);
+            for (int j = 0; j < s.size(); ++j)
+            {
+                if (s[j] >= '0' && s[j] <= '9')
+                    s[j] = '1';
             }
         }
-        for (i = start + 1; i < s.size(); ++i)
-        {
-            if (s[i] == '#' || s[i] == ',')
-                s[start++] = s[i];
-            else if (s[i - 1] == '#' || s[i - 1] == ',')
-            {
-                 s[start++] = '1';
-            }
-        }
-        s.resize(start);
-        for (int j = 0; j < s.size(); ++j)
-        {
-            if (s[j] >= '0' && s[j] <= '9')
-                s[j] = '1';
-        }
-    }
     public:
             bool isValidSerialization(string preorder) {
             if (preorder == "#") return true;
             del(preorder);
+            cout << preorder << endl;
             st state = s;
             int needNum = 0;
             for (int i = preorder.size() - 1; i >= 0; i -= 2)
@@ -123,8 +124,8 @@ You may assume that the input format is always valid, for example it could never
                     }
                 }
             }
+            cout << needNum << endl;
             return needNum == 0;
         }
-    };
 
-成功AC！
+成功AC！时间复杂度O(n)，空间复杂度O(1).
