@@ -68,13 +68,9 @@ header-img: "img/green.jpg"
 - 工作积极、认真，学习能力强
 - 具有独立思考、解决问题和良好的团队协作能力
 
-
 ### 联系
 
 - [博客：zhanglei541120.github.io](http://zhanglei541120.github.io)
-
 - [邮箱：zhanglei541120@gmail.com]
 
-
-
-
+如果对我的简历有什么意见或者建议，欢迎通过邮箱及其他方式联系^_^
