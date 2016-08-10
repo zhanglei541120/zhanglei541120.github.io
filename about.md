@@ -71,6 +71,6 @@ header-img: "img/green.jpg"
 ### 联系
 
 - [博客：zhanglei541120.github.io](http://zhanglei541120.github.io)
-- [邮箱：zhanglei541120@gmail.com]
+- 邮箱：zhanglei541120@gmail.com
 
 如果对我的简历有什么意见或者建议，欢迎通过邮箱及其他方式联系^_^
